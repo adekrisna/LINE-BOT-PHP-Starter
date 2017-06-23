@@ -35,7 +35,7 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello
 $response = $bot->pushMessage('U7de80d0a2ceea863e831375badd2eb55', $textMessageBuilder);
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 $ch = curl_init($url);
-			
+	try{
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -44,7 +44,10 @@ $ch = curl_init($url);
 			$result = curl_exec($ch);
 			curl_close($ch);
 			echo $result . "\r\n";
-
+	}
+catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
 
 
 ?>
