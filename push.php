@@ -1,6 +1,5 @@
+<?php
 
-
- 
 // $strAccessToken = "Wrmy2j+qSD5kpeDpMTKc5UYXWSSA9h1wZ51d6hkzbhingG2bI0EJJtNC97coCiY/QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctf3wF09jCF5XBhXzv8Y8+ESj41YUNx13e3fUjRj6cUIQdB04t89/1O/w1cDnyilFU=";
  
 // $strUrl = "https://api.line.me/v2/bot/message/push";
@@ -25,11 +24,8 @@
 // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 // $result = curl_exec($ch);
 // curl_close ($ch);
- 
 
-
-<?php
-
+//-------------------------------------------------------------------------------
 $strUrl = "https://api.line.me/v2/bot/message/push";
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('Wrmy2j+qSD5kpeDpMTKc5UYXWSSA9h1wZ51d6hkzbhingG2bI0EJJtNC97coCiY/QPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctf3wF09jCF5XBhXzv8Y8+ESj41YUNx13e3fUjRj6cUIQdB04t89/1O/w1cDnyilFU=');
