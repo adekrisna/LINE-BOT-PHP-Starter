@@ -1,3 +1,4 @@
+<?php
 include ('LINE-BOT-PHP-Starter/line-bot.php');
 
 $channelSecret = '2016f3f7fb001c7f38154a3fe3f3202c';
@@ -15,3 +16,4 @@ if ($bot->isSuccess()) {
 // Failed
 echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
 exit();
+?>
