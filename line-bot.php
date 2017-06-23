@@ -1,6 +1,6 @@
 <?php
 
-include ('vendor/autoload.php');
+include ('LINE-BOT-PHP-Starter/autoload.php');
 
 use \LINE\LINEBot;
 use \LINE\LINEBot\HTTPClient;
