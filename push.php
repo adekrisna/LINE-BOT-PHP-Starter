@@ -20,7 +20,7 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('Wrmy2j+qSD5kpeDpMTKc5
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '2016f3f7fb001c7f38154a3fe3f3202c']);
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
-$response = $bot->pushMessage('fozenfon', $textMessageBuilder);
+$response = $bot->pushMessage('fozenffon', $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
