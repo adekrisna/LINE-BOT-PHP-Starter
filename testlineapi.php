@@ -59,7 +59,7 @@
 if ($_POST) { 
 
 //Setting
-$lineapi = "B2lRc1eDEgdUJHpmF3xldSXTNLeiME9Rz9WQrldPJcq";
+$lineapi = "B2lRc1eDEgdUJHpmF3xldSXTNLeiME9Rz9WQrldPJcq","faewS1EFlfshwQwQI7qSjqDB31fk8Bh1NPIJYH5crlD";
 
 $mms =  trim($_POST['textArea']);
    
