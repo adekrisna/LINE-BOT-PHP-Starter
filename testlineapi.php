@@ -63,7 +63,7 @@ $lineapis = array(0 => "QK98CA3EQBaoc9CBCbV8K0ONNDFYLN0IXzumPtJPMLj", 1=> "Ct0t7
 
 $mms =  trim($_POST['textArea']);
 foreach($lineapis as $key => $lineapi){ 
-   
+   var_dump($lineapi);
    
 date_default_timezone_set("Asia/Bangkok");
 //line Send
