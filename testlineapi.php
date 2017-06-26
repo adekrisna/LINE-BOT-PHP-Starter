@@ -59,10 +59,10 @@
 if ($_POST) { 
 
 //Setting
-$lineapis = array("QK98CA3EQBaoc9CBCbV8K0ONNDFYLN0IXzumPtJPMLj","Ct0t754CIxyvfhUXBHPvU3qpU0GTj0fs3nrHwkDLGZk");
+$lineapis = array(0 => "QK98CA3EQBaoc9CBCbV8K0ONNDFYLN0IXzumPtJPMLj", 1=> "Ct0t754CIxyvfhUXBHPvU3qpU0GTj0fs3nrHwkDLGZk");
 
 $mms =  trim($_POST['textArea']);
-foreach($lineapis as $lineapi){ 
+foreach($lineapis as $key => $lineapi){ 
    
    
 date_default_timezone_set("Asia/Bangkok");
