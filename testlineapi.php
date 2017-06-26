@@ -59,10 +59,10 @@
 if ($_POST) { 
 
 //Setting
-$lineapis = array(0 => "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY", 1=> "Ct0t754CIxyvfhUXBHPvU3qpU0GTj0fs3nrHwkDLGZk");
-$lineapi = "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY";
+$lineapis = array(0 => "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY", 1=> "1V6jR6xRWaUh0uXSu309vfLyJxllSPLgn0DZnRJKiAt");
+//$lineapi = "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY";
 $mms =  trim($_POST['textArea']);
-//foreach($lineapis as $key => $lineapi){ 
+foreach($lineapis as $key => $lineapi){ 
    
 date_default_timezone_set("Asia/Bangkok");
 //line Send
@@ -93,7 +93,7 @@ echo "status : ".$result_['status']; echo "message : ". $result_['message']; }
 //Close connect 
 curl_close( $chOne );      
 }
-//}
+}
 ?>
 </div>
 </div>
