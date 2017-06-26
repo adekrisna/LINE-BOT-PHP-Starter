@@ -56,6 +56,10 @@
   </fieldset>
 </form>
 <?php 
+    
+$content = file_get_contents('php://input'); 
+$arrJson = json_decode($content, true); 
+var_drum($arrJson);   
 if ($_POST) { 
 
 //Setting
