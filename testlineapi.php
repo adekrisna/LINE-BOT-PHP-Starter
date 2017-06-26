@@ -59,10 +59,10 @@
 if ($_POST) { 
 
 //Setting
-//$lineapis = array(0 => "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex", 1=> "1V6jR6xRWaUh0uXSu309vfLyJxllSPLgn0DZnRJKiAt");
-$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
+$lineapis = array(0 => "gAPrVY2fd2FPY8CB2YmMigsiI12nHG05ruVlf20vcSV", 1=> "qudmwanYhgaz873Ja4vOZ8MhhnPVCo4K7K2Xa4mfeju");
+//$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
 $mms =  trim($_POST['textArea']);
-//foreach($lineapis as $key => $lineapi){ 
+foreach($lineapis as $key => $lineapi){ 
    
 date_default_timezone_set("Asia/Bangkok");
 //line Send
