@@ -60,9 +60,9 @@ if ($_POST) {
 
 //Setting
 $lineapis = array(0 => "QK98CA3EQBaoc9CBCbV8K0ONNDFYLN0IXzumPtJPMLj", 1=> "Ct0t754CIxyvfhUXBHPvU3qpU0GTj0fs3nrHwkDLGZk");
-
+$lineapi = "QK98CA3EQBaoc9CBCbV8K0ONNDFYLN0IXzumPtJPMLj";
 $mms =  trim($_POST['textArea']);
-foreach($lineapis as $key => $lineapi){ 
+//foreach($lineapis as $key => $lineapi){ 
    
 date_default_timezone_set("Asia/Bangkok");
 //line Send
@@ -93,7 +93,7 @@ echo "status : ".$result_['status']; echo "message : ". $result_['message']; }
 //Close connect 
 curl_close( $chOne );      
 }
-}
+//}
 ?>
 </div>
 </div>
