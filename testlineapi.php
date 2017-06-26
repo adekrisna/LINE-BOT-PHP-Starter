@@ -59,7 +59,7 @@
 if ($_POST) { 
 
 //Setting
-$lineapis = array(0 => "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY", 1=> "1V6jR6xRWaUh0uXSu309vfLyJxllSPLgn0DZnRJKiAt");
+//$lineapis = array(0 => "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY", 1=> "1V6jR6xRWaUh0uXSu309vfLyJxllSPLgn0DZnRJKiAt");
 $lineapi = "XQLflZY084crGCIAwYbkDEjxVA8D4jcGScx5OEkxAeY";
 $mms =  trim($_POST['textArea']);
 //foreach($lineapis as $key => $lineapi){ 
