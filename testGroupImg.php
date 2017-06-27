@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PHP Line Notify ทดสอบส่งไลน์ผ่านเว็บด้วย PHP</title>
+  <title>Line Notify(image)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
   <div class="row content">
   <form class="form-horizontal" method="post">
   <fieldset>
-    <legend>PHP Line Notify ทดสอบส่งไลน์ผ่านเว็บด้วย PHP</legend>
+    <legend>Line Notify(image)</legend>
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">ข้อความ</label>
       <div class="col-lg-10">
