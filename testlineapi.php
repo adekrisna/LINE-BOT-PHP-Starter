@@ -56,6 +56,8 @@
   </fieldset>
 </form>
 <?php 
+$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
+$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
        
 if ($_POST) { 
 
@@ -86,6 +88,8 @@ $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorizat
 curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
 //RETURN 
 curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec( $chOne ); 
 //Check error 
 if(curl_error($chOne)) { echo 'error:' . curl_error($chOne); } 
