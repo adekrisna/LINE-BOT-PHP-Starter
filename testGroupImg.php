@@ -63,11 +63,11 @@ $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
        
 if ($_POST) { 
 //Setting
-$lineapis = array("mtBNqNUTljJzkrsjtubrH5hPvt4Lq93WXYJUPVLTNBw","dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS","htGDXAYmHtW07XQwaCVU4FMFoLCrQwypDTXhQgSaSSo"); //tsetGrop,test2,test3
+$lineapis = array(0=>"mtBNqNUTljJzkrsjtubrH5hPvt4Lq93WXYJUPVLTNBw",1=>"dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS",2=>"htGDXAYmHtW07XQwaCVU4FMFoLCrQwypDTXhQgSaSSo"); //tsetGrop,test2,test3
 //$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
 $mms =  trim($_POST['textArea']);
 $img = trim($_POST['inputimage']);
-foreach($lineapis){ 
+foreach($lineapis as $key => $lineapi){ 
    
 date_default_timezone_set("Asia/Bangkok");
 //line Send
