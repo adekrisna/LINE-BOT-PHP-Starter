@@ -65,7 +65,7 @@ if ($_POST) {
 //Setting
 $lineapis = array(0 => "htGDXAYmHtW07XQwaCVU4FMFoLCrQwypDTXhQgSaSSo", 1=> "dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS");
 //$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
-$mms =  trim($_POST['textArea']);
+$mms =  trim($_POST['inputimage']);
 foreach($lineapis as $key => $lineapi){ 
    
 date_default_timezone_set("Asia/Bangkok");
@@ -78,7 +78,7 @@ curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0);
 //POST 
 curl_setopt( $chOne, CURLOPT_POST, 1); 
 // Message 
-curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=$mms"); 
+//curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=$mms"); 
 //ถ้าต้องการใส่รุป ให้ใส่ 2 parameter imageThumbnail และimageFullsize
 curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=$mms&imageThumbnail=$inputimage&imageFullsize=$inputimage"); 
 // follow redirects 
