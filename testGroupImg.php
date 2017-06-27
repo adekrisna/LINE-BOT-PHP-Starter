@@ -63,7 +63,7 @@ $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
        
 if ($_POST) { 
 //Setting
-$lineapis = array("mtBNqNUTljJzkrsjtubrH5hPvt4Lq93WXYJUPVLTNBw","dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS",'htGDXAYmHtW07XQwaCVU4FMFoLCrQwypDTXhQgSaSSo'); //tsetGrop,test2,test3
+$lineapis = array("mtBNqNUTljJzkrsjtubrH5hPvt4Lq93WXYJUPVLTNBw","dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS","htGDXAYmHtW07XQwaCVU4FMFoLCrQwypDTXhQgSaSSo"); //tsetGrop,test2,test3
 //$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
 $mms =  trim($_POST['textArea']);
 $img = trim($_POST['inputimage']);
