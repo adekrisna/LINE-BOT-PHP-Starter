@@ -6,7 +6,7 @@ $mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55');
 foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text",
-            "text" => 'Hello DX'
+            "text" => 'test'
         ];
  
         $post_data = [
