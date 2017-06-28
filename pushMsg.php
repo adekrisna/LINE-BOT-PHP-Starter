@@ -71,14 +71,13 @@
     </div>
   </div>
 </div>
-    <div class="center">
+    
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
           <div>
       </div>
-    </div>
     
   </fieldset>
 </form>
