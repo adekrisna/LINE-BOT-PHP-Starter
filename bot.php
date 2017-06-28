@@ -5,7 +5,7 @@ $strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3Tyao
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
-var_dump();
+
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
  
@@ -35,7 +35,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 //   $arrPostData['messages'][0]['type'] = "text";
 //   $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
 // }
- 
+var_dump($arrJson);
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
@@ -48,7 +48,6 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec($ch);
-
 curl_close ($ch);
 //echo "ok";
 
