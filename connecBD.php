@@ -2,9 +2,9 @@
 <div align="center" style="background-color: #33FF66;">
      <?php
     
-     $hostName = "localhost";
-     $user="root";
-     $pass="";
+     $hostName = "us-cdbr-azure-west-b.cleardb.com";
+     $user="bf8b0efb6c1b5b";
+     $pass="325bfa78";
      $dbName="name" ;
      $connect=mysqli_connect($hostName,$user,$pass,$dbName) 
                 or die("ไม่สามารถเชื่อมต่อได้") ;
