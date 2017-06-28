@@ -43,15 +43,16 @@
     
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Text</label>
-      <div class="col-lg-10">
+      <div class="col-lg-8">
         <textarea class="form-control" rows="3" id="textArea"  name="textArea"></textarea>
       </div>
     </div>
     
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Member
-</button>
+  </button>
+    </center>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
