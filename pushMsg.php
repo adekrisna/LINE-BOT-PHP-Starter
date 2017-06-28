@@ -39,7 +39,7 @@
   <div class="row content">
   <form class="form-horizontal" method="post">
   <fieldset>
-    <legend>Push Messages</legend>
+    <legend style="margin-top:50px;">Push Messages</legend>
     
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Text</label>
@@ -59,14 +59,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Member</h4>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Summit</button>
       </div>
     </div>
   </div>
@@ -74,7 +74,6 @@
     <div class="center">
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        
         <button type="reset" class="btn btn-default">Cancel</button>
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
           <div>
