@@ -41,7 +41,7 @@
   <fieldset>
     <legend>Push Messages</legend>
     <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">¢ÈÕ§«“¡</label>
+      <label for="textArea" class="col-lg-2 control-label">‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°</label>
       <div class="col-lg-10">
         <textarea class="form-control" rows="3" id="textArea"  name="textArea"></textarea>
       </div>
