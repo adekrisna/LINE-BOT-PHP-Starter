@@ -49,10 +49,10 @@
     </div>
     
 <!-- Button trigger modal -->
-<center><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<div class="center"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Member
-  </button>
-    </center>
+  </button></div>
+    
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
