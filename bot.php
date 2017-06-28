@@ -5,7 +5,7 @@ $strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3Tyao
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
-var_dump($content);
+var_dump();
  
 $strUrl = "https://api.line.me/v2/bot/message/reply";
  
@@ -18,22 +18,23 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
-}else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
-}else{
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
 }
+// }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+// }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+// }else{
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//   $arrPostData['messages'][0]['type'] = "text";
+//   $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+// }
  
  
 $ch = curl_init();
