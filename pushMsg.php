@@ -40,18 +40,27 @@
   <form class="form-horizontal" method="post">
   <fieldset>
     <legend>Push Messages</legend>
+    
     <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">ข้อความ</label>
+      <label for="textArea" class="col-lg-2 control-label">Text</label>
       <div class="col-lg-10">
         <textarea class="form-control" rows="3" id="textArea"  name="textArea"></textarea>
       </div>
     </div>
+    
+    <div>
+    <div class="col-lg-10">
+       <label for="textArea" class="col-lg-2 control-label">Member</label>
+    </div>
+    </div>
+    
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
         <button type="submit" class="btn btn-primary" name="submit">Submit</button>
       </div>
     </div>
+    
   </fieldset>
 </form>
 
