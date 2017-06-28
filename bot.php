@@ -7,16 +7,16 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 
 $get_mid =  $arrJson['events'][0]['source']['userId'];
-require 'connecBD.php';
- $sql =  "insert into member(mid) values('$mid')" ;
-     $result = mysqli_query($connect,$sql);
+// require 'connecBD.php';
+//  $sql =  "insert into member(mid) values('$mid')" ;
+//      $result = mysqli_query($connect,$sql);
      
-     if($result)    {
-           echo "เพิ่มข้อมุลเรียบร้อบ";
-           echo "<a href='showMember.php'>ดูข้อมูล</a>" ;
-     }   else{
-          echo "เกิดข้อผิดพลาด".mysqli_error($connect);
-     } 
+//      if($result)    {
+//            echo "เพิ่มข้อมุลเรียบร้อบ";
+//            echo "<a href='showMember.php'>ดูข้อมูล</a>" ;
+//      }   else{
+//           echo "เกิดข้อผิดพลาด".mysqli_error($connect);
+//      } 
      
 $strUrl = "https://api.line.me/v2/bot/message/reply";
  
