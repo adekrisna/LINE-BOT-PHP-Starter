@@ -39,10 +39,10 @@
   <div class="row content">
   <form class="form-horizontal" method="post">
   <fieldset>
-    <legend style="margin-top:50px;">Push Messages</legend>
+    <h1 style="margin-top:50px;">Push Messages</h1>
     
     <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Text</label>
+      <labe3 for="textArea" class="col-lg-2 control-label">Text</labe3>
       <div class="col-lg-8">
         <textarea class="form-control" rows="3" id="textArea"  name="textArea"></textarea>
       </div>
