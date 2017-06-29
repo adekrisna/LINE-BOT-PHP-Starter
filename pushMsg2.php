@@ -35,8 +35,7 @@
             <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
-            <form method="post">
-                <form>
+            
 
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
