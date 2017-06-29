@@ -113,7 +113,7 @@ $midUser = $_POST['mid'];
 // var_dump($text) ;
 
 //$mids = array($midUser); 
-foreach($mids as $key => $mid){        
+foreach($midUser as $key => $mid){        
         $messages = [
             "type" => "text",
             "text" => $text
