@@ -54,7 +54,7 @@
                     </div>
                     <!--Modal-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <form method="post" name="n" id="formcon">
+          <form method="post">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -64,16 +64,16 @@
                 <div class="container">
                   
                         <div class="checkbox">
-                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" id="test1" name="mid1">oil</label>
+                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid1">oil</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" id="test2" name="mid2">ffon</label>
+                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid2">ffon</label>
                         </div>
                         
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" form="formcon" name="submit">Summit</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Summit</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
