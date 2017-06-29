@@ -104,7 +104,7 @@
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
 $text = $_POST['textArea'];
-$midUser = $_POST['n'];
+$midUser = array($_POST['mid']);
 //$lineMaster = $_POST['lineMaster'];
 
 var_dump($midUser) ;
