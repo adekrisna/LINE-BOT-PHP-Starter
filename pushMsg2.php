@@ -103,6 +103,9 @@ $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
 $strAccessToken = $_POST['tokenLine'];
 var_dump($strAccessToken) ;
+var_dump($midUser) ;
+var_dump($text) ;
+
     
 
 
