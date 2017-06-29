@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -48,32 +47,6 @@
                         MEMBER
                         </button>
                     </div>
-                    <!--Modal-->
-                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                       <div class="modal-dialog" role="document">
-                           <div class="modal-content">
-                               <div class="modal-header">
-                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                   <h4 class="modal-title" id="myModalLabel">Member</h4>
-                               </div>
-                               <div class="container">
-                                   <form method="post">
-                                       <div class="checkbox">
-                                           <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid">ffon</label>
-                                       </div>
-                                       <div class="checkbox">
-                                           <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid">oil</label>
-                                       </div>
-                                   </form>
-                               </div>
-                               <div class="modal-footer">
-                                   <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-                                   <button type="submit" class="btn btn-primary" name="submit">Summit</button>
-
-                               </div>
-                           </div>
-                       </div>
-                   </div>
                     <!--submitCancel-->
                     <div class="button-sc text-center">
                         <button type="cancel" class="btn btn-default" style="margin-right:10px;">Cancel</button>
@@ -86,7 +59,32 @@
 
 
 
-
+<!--Modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Member</h4>
+                </div>
+                <div class="container">
+                    <form method="post">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid">ffon</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454"name="mid">oil</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Summit</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         $('#myModal').on('shown.bs.modal', function () {
