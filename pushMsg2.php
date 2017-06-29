@@ -61,7 +61,7 @@
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
-                    <form method="post" id="n">
+                    <form method="post" name="n">
                         <div class="checkbox">
                             <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid">oil</label>
                         </div>
