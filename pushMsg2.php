@@ -41,7 +41,12 @@
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
-                    
+                     <!--buttonMember-->
+                    <div class="form-group" align="center">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        MEMBER
+                        </button>
+                    </div>
                     <!--submitCancel-->
                     <div class="button-sc text-center">
                         <button type="cancel" class="btn btn-default" style="margin-right:10px;">Cancel</button>
