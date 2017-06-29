@@ -61,7 +61,7 @@
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
-                    <form method="post">
+                    <form method="post" id="n">
                         <div class="checkbox">
                             <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid">oil</label>
                         </div>
@@ -104,7 +104,7 @@
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
 $text = $_POST['textArea'];
-$midUser = $_POST['mid'];
+$midUser = $_POST['n'];
 //$lineMaster = $_POST['lineMaster'];
 
 var_dump($midUser) ;
