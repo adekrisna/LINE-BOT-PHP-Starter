@@ -41,16 +41,11 @@
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
-                    <!--buttonMember-->
-                    <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
-                        MEMBER
-                        </button>
-                    </div>
+                    
                     <!--submitCancel-->
                     <div class="button-sc text-center">
                         <button type="cancel" class="btn btn-default" style="margin-right:10px;">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -58,47 +53,11 @@
     </div>
 
 
-
-<!--Modal-->
-<!--     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Member</h4>
-                </div>
-                <div class="container">
-                    <form method="post">
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid">ffon</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454"name="mid">oil</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').focus()
-        })
-    </script>
-
-
-
 <?php
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
 $text = $_POST['textArea'];
-$midUser = $_POST['mid'];
+//$midUser = $_POST['mid'];
 $strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=";
 $mids = array('U7de80d0a2ceea863e831375badd2eb55'); 
 foreach($mids as $key => $mid){        
