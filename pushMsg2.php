@@ -54,7 +54,7 @@
                     </div>
                     <!--Modal-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <form method="post">
+          <form method="post" id="formcon">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -73,7 +73,7 @@
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" name="submit">Summit</button>
+                    <button type="submit" class="btn btn-primary" form="formcon" name="submit">Summit</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
