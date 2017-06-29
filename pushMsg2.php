@@ -38,8 +38,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
-                        <label>Text:</label>
-                        <textarea class="form-control" rows="5" id="textArea" name="text"></textarea>
+                        <label>Text</label>
+                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
                     <!--buttonMember-->
                     <div class="form-group" align="center">
@@ -70,10 +70,10 @@
                 <div class="container">
                     <form method="post">
                         <div class="checkbox">
-                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55">ffon</label>
+                            <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid">ffon</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454">oil</label>
+                            <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454"name="mid">oil</label>
                         </div>
                     </form>
                 </div>
@@ -98,7 +98,7 @@
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
 $text = $_POST['textArea'];
-$midUser = $_POST['value'];
+$midUser = $_POST['mid'];
 $strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=";
 $mids = array($midUser); 
 foreach($mids as $key => $mid){        
@@ -129,7 +129,7 @@ foreach($mids as $key => $mid){
         curl_close($ch);
 }
  
-?>
+ ?>
 
 </body>
 
