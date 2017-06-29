@@ -35,11 +35,11 @@
             <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
-<!--             <form method="post"><div class="form-group" align="center">
-           <button type="button" class="btn btn-primary" value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="lineMaster"> Line@ffon</button>
-           <button type="button" class="btn btn-primary" value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="lineMaster"> Line@oil</button>
+            <form method="post"><div class="form-group" align="center">
+           <button type="button" class="btn btn-primary" value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="tokenLine[0]"> Line@ffon</button>
+           <button type="button" class="btn btn-primary" value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="tokenLine[1]"> Line@oil</button>
             </div><form>
- -->
+
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
@@ -69,8 +69,6 @@
                         <div class="checkbox">
                             <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid[1]">ffon</label>
                         </div>
-                        
-                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" name="submit">Summit</button>
@@ -104,17 +102,14 @@
 
 <?php
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
+$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80'; 
+$strAccessToken = 'QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=';            
 $text = $_POST['textArea'];
-$midUser = $_POST['mid'];
-    
-//$lineMaster = $_POST['lineMaster'];
+$midUser = $_POST['mid'];  
+$tokenLine = $_POST['tokenLine'];
 
-var_dump($midUser) ;
-//var_dump($lineMaster);
-
-
-$strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=";
+$strAccessToken1 = $tokenLine;
+var_dump($strAccessToken1) ;
 //$mids = array($midUser); 
 foreach($midUser as $key => $mid){     
         
@@ -127,7 +122,7 @@ foreach($midUser as $key => $mid){
             "to" => $mid,
             "messages" => [$messages]
         ];
- var_dump($post_data);
+
     
         $header = array(
             'Content-Type: application/json',
