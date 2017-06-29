@@ -63,8 +63,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" name="submit">Summit</button>
-                     <button type="cancel" class="btn btn-default" style="margin-right:10px;">Close</button>
-<!--                     <button type="cancel" class="btn btn-default" data-dismiss="modal">close</button> -->
+                 <button type="cancel" class="btn btn-default" data-dismiss="modal">Close</button> 
                 </div>
             </div>
         </div>
