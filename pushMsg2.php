@@ -110,7 +110,7 @@ $midUser = $_POST['mid'];
     
 //$lineMaster = $_POST['lineMaster'];
 
-var_dump($midUser2) ;
+var_dump($midUser) ;
 //var_dump($lineMaster);
 
 
