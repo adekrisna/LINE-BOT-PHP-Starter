@@ -102,8 +102,14 @@ $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
 $strAccessToken = $_POST['tokenLine'];
+
+    echo("this is toke : \n");
 var_dump($strAccessToken) ;
+
+    echo("this is mid : \n");
 var_dump($midUser) ;
+
+    echo("this is text : \n");
 var_dump($text) ;
 
     
@@ -137,7 +143,8 @@ foreach($midUser as $key => $mid){
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
-    var_dump($result);
+    echo("this is result : \n");
+        var_dump($result);
         curl_close($ch);
 }
  
