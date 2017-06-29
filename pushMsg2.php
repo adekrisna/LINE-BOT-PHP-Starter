@@ -67,11 +67,13 @@
                         <div class="checkbox">
                             <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid[1]">ffon</label>
                         </div>
-                    <div class="form-group" align="center">
+                </div>
+                
+                <form methot="POST"> <div class="form-group" align="center">
            <button type="button" class="btn btn-primary" value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="tokenLine"> Line@ffon</button>
            <button type="button" class="btn btn-primary" value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="tokenLine"> Line@oil</button>
-            </div>
-                </div>
+            </div></form>
+                
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" name="submit">Summit</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
