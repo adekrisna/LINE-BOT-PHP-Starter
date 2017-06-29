@@ -137,6 +137,7 @@ foreach($midUser as $key => $mid){
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
+    var_dump($result);
         curl_close($ch);
 }
  
