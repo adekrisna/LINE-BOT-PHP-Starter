@@ -116,7 +116,8 @@ var_dump($midUser) ;
 
 $strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=";
 //$mids = array($midUser); 
-foreach($midUser as $key => $mid){        
+foreach($midUser as $key => $mid){     
+        
         $messages = [
             "type" => "text",
             "text" => $text
@@ -126,7 +127,8 @@ foreach($midUser as $key => $mid){
             "to" => $mid,
             "messages" => [$messages]
         ];
- 
+ var_dump($post_data);
+    
         $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
