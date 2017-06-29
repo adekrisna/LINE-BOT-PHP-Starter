@@ -113,7 +113,7 @@ var_dump($midUser) ;
 var_dump($text) ;
 
 //$mids = array($midUser); 
-foreach($midUser as $key => $mid){        
+foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text",
             "text" => $text
