@@ -54,6 +54,7 @@
                     </div>
                     <!--Modal-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <form method="post" name="n">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -61,7 +62,7 @@
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
-                    <form method="post" name="n">
+                  
                         <div class="checkbox">
                             <label><input type="checkbox" value="Ub5fea2ff169cba24b2179fd33e59e454" name="mid">oil</label>
                         </div>
@@ -69,7 +70,7 @@
                             <label><input type="checkbox" value="U7de80d0a2ceea863e831375badd2eb55" name="mid">ffon</label>
                         </div>
                         
-                    </form>
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary" name="submit">Summit</button>
@@ -77,6 +78,7 @@
                 </div>
             </div>
         </div>
+              </form>
     </div>
 
                     <!--submitCancel-->
