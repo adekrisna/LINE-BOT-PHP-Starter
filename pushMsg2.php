@@ -108,8 +108,8 @@ $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
 $tokenLine = $_POST['tokenLine'];
 
-$strAccessToken1 = $tokenLine;
-var_dump($strAccessToken1) ;
+//$strAccessToken1 = $tokenLine;
+var_dump($tokenLine) ;
 //$mids = array($midUser); 
 foreach($midUser as $key => $mid){     
         
