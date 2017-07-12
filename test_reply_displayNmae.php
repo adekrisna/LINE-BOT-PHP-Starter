@@ -1,61 +1,52 @@
 <?php
-/**
- * Eric Draken
- * Date: 2016-09-02
- * Time: 4:44 PM
- * Desc: Callback for responding to Line messages
- *       Send 'whoami' to this endpoint to get a reply with your mid.
- */
- 
-// I put constants like 'LINE_CHANNEL_ID' here 
-//require_once __DIR__ . '/../includes/config.php';
-require_once __DIR__ . "/../includes/line-bot-sdk/vendor/autoload.php";
- 
-use LINE\LINEBot;
-use LINE\LINEBot\HTTPClient\GuzzleHTTPClient;
- 
-// Set these values
-$config = [
-    'channelId' => 	1521137457,
-    'channelSecret' => 	2016f3f7fb001c7f38154a3fe3f3202c,
-    'channelMid' => 	U7de80d0a2ceea863e831375badd2eb55,
-];
-$sdk = new LINEBot($config, new GuzzleHTTPClient($config));
- 
-$postdata = @file_get_contents("php://input");
-$messages = $sdk->createReceivesFromJSON($postdata);
- 
-// Verify the signature
-// REF: http://line.github.io/line-bot-api-doc/en/api/callback/post.html#signature-verification
-// REF: http://stackoverflow.com/a/541450
-$sigheader = 'X-LINE-ChannelSignature';
-$signature = @$_SERVER[ 'HTTP_'.strtoupper(str_replace('-','_',$sigheader)) ];
-if($signature && $sdk->validateSignature($postdata, $signature)) {
-    // Next, extract the messages
-    if(is_array($messages)) {
-        foreach ($messages as $message) {
-            if ($message instanceof LINEBot\Receive\Message\Text) {
-                $text = $message->getText();
-                if (strtolower(trim($text)) === "whoami") {
-                    $fromMid = $message->getFromMid();
-                    $user = $sdk->getUserProfile($fromMid);
-                    $displayName = $user['contacts'][0]['displayName'];
- 
-                    $reply = "You are $displayName, and your mid is:\n\n$fromMid";
- 
-                    // Send the mid back to the sender and check if the message was delivered
-                    $result = $sdk->sendText([$fromMid], $reply);
-                    if(!$result instanceof LINE\LINEBot\Response\SucceededResponse) {
-                        error_log('LINE error: ' . json_encode($result));
-                    }
-                } else {
-                    // Process normally, or do nothing
-                }
-            } else {
-                // Process other types of LINE messages like image, video, sticker, etc.
-            }
-        }
-    } // Else, error
-} else {
-    error_log('LINE signatures didn\'t match: ' . $signature);
+function reply_getMid()
+{
+    $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
+    $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
+    $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
+    
+    $content = file_get_contents('php://input');
+    $arrJson = json_decode($content, true);
+    $get_mid =  $arrJson['events'][0]['source']['userId'];
+    $get_Name = 
+    $strUrl = "https://api.line.me/v2/bot/message/reply";
+  
+    $arrHeader = array();
+    $arrHeader[] = "Content-Type: application/json";
+    $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['displayName'];
+  //  $arrPostData['messages'][0]['text'] =  "Name : ".$arrJson['displayName'];
+
+    if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['displayName'];
+        // $arrPostData['messages'][0]['text'] =  $arrJson['displayName'];
+    }
+    
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $strUrl);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_PROXY, $proxy);
+    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+    $result = curl_exec($ch);
+    curl_close ($ch);
+    echo "ok";
 }
+
+
+
+?>
+
+
+
+
