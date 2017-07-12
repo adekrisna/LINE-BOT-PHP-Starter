@@ -1,6 +1,5 @@
 <?php
 
-
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
@@ -17,15 +16,15 @@
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['displayName'];
-  //  $arrPostData['messages'][0]['text'] =  "Name : ".$arrJson['displayName'];
+    $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+    $arrPostData['messages'][0]['text'] =  "Name : ".$arrJson['displayName'];
 
     if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['displayName'];
-        // $arrPostData['messages'][0]['text'] =  $arrJson['displayName'];
+        $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+      
     }
     
     $ch = curl_init();
@@ -46,7 +45,3 @@
 
 
 ?>
-
-
-
-
