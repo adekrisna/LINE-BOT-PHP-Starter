@@ -1,6 +1,6 @@
 <html>
 <title>@ME</title>
-1
+0
 <h1 align = 'center'>@ME</h1>
     <P align=center>
         <img src="http://qr-official.line.me/L/oUypr1a-r8.png">
@@ -36,14 +36,13 @@ function qr_code()
     $get_mid =  $arrJson['events'][0]['source']['userId'];
     $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
     setcookie('test', $get_mid , time() + (86400 * 30), "/");
-
-    setcookie('test', $get_mid, time() + (86400 * 30), "/");
-            if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+    
+    if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
             $arrPostData['messages'][0]['type'] = "text";
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
-            setcookie('test', $get_mid , time() + (86400 * 30), "/");
+            //setcookie('test', $get_mid , time() + (86400 * 30), "/");
     }
     
         
