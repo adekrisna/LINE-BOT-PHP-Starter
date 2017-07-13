@@ -41,7 +41,7 @@
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);echo "Ok<br>";var_dump($_SESSION['mid']);
         curl_close ($ch);
-        
+        echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
         
     }
     qr_code();
