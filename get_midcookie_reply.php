@@ -33,9 +33,9 @@ function qr_code()
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-    $get_mid =  $arrJson['events'][0]['source']['userId'];
-    $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
-    setcookie('test', $get_mid , time() + (86400 * 30), "/");
+//     $get_mid =  $arrJson['events'][0]['source']['userId'];
+//     $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
+//     setcookie('test', $get_mid , time() + (86400 * 30), "/");
     
     if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
@@ -57,8 +57,8 @@ function qr_code()
     curl_setopt($ch, CURLOPT_PROXY, $proxy);
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
-    echo "Ok<br>";
-    var_dump($_SESSION['mid']);
+    echo "0k<br>";
+//     var_dump($_SESSION['mid']);
     curl_close ($ch);
     var_dump($result);
 
