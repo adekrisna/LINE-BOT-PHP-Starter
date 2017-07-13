@@ -8,6 +8,7 @@
     <div align=center><a href="https://line.me/R/ti/p/%40pyg2061f"><img height="36" border="0" alt="เพิ่มเพื่อน" src="https://scdn.line-apps.com/n/line_add_friends/btn/en.png"></a></div>
     <br>
     <div align=center>line@ffon</div>
+    <button onClick = "window.open('https://mighty-inlet-38627.herokuapp.com/pushMsg2.php')"> open pushMsg </button>
 
 
 <?php
@@ -51,12 +52,12 @@ function qr_code()
     echo "Ok<br>";
     var_dump($_SESSION['mid']);
     curl_close ($ch);
+    var_dump($result);
+
     open_pushMsg();
-    //echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
-    //setcookie('test', 'kkkkkkkkkk' , time() + (86400 * 30), "/");
 }
 
     
     ?>
     
-    </html>
+</html>
