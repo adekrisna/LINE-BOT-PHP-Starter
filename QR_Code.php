@@ -1,5 +1,5 @@
 <html>
-    5
+    4
 <title>@ME</title>
 
 <h1 align = 'center'>@ME</h1>
@@ -36,7 +36,7 @@
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
             
-            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "w");
+            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+");
             fwrite($files, $get_mid);
             fclose($files);
         }
