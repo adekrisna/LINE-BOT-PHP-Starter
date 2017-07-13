@@ -1,4 +1,12 @@
+<html>
+<title>@ME</title>
 
+<h1 align = 'center'>@ME</h1>
+    <P align=center>
+        <img src="http://qr-official.line.me/L/oUypr1a-r8.png">
+    </P>
+    <div align=center>line@ffon</div>
+</html>
 
 
 <?php
