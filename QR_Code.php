@@ -55,6 +55,6 @@ var_dump($_SESSION['mid']); ?>
         echo "Ok<br>";
         var_dump($_SESSION['mid']);
     }
-    //qr_code();
+    qr_code();
     
     ?>
