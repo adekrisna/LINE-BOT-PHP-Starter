@@ -21,9 +21,6 @@
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-        if($get_mid != NULL && $get_mid != ""){
-        $_SESSION['mid'] = $get_mid;
-        }
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
