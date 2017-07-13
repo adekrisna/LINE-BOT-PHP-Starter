@@ -35,7 +35,7 @@
             $arrPostData['messages'][0]['type'] = "text";
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
-            
+            setcookie('test', '2222', time() + (86400 * 30), "/");
         }
         
         $ch = curl_init();
@@ -55,9 +55,7 @@
     }
     qr_code();
     
-            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+");
-            fwrite($files, "2222");
-            fclose($files);
+            
     
     ?>
     
