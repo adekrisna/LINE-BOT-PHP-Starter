@@ -36,9 +36,9 @@
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
             
-//             $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+") or die("Unable to open file!");
-//             fwrite($files, $get_mid);
-//             fclose($files);
+            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "w");
+            fwrite($files, $get_mid);
+            fclose($files);
         }
         
         $ch = curl_init();
