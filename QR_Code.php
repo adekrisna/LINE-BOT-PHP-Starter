@@ -36,7 +36,7 @@
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
            
             $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid=$get_mid&addby=ffon');
+            curl_setopt($ch,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
             curl_setopt($ch,CURLOPT_CUSTOMREQUEST , 'GET');
             curl_setopt($ch,CURLOPT_RETURNTRANSFER , true);
             //curl_setopt($ch,CURLOPT_POSTFIELDS, 'http://uat.dxplace.com/dxtms/testem?mid=U8c4eb5ebbd3493b74c6d17a77d3e6cd3');
