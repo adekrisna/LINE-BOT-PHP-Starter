@@ -5,7 +5,7 @@ $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8
 
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
-$strUrl = "https://api.line.me/v2/bot/profile/{userId}";
+$strUrl = "https://api.line.me/v2/bot/profile/U7de80d0a2ceea863e831375badd2eb55";
 
 $header = array(
 'Content-Type: application/json',
@@ -15,7 +15,7 @@ $header = array(
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($strAccessToken);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '2016f3f7fb001c7f38154a3fe3f3202c']);
-$response = $bot->getProfile('<userId>');
+$response = $bot->getProfile('U7de80d0a2ceea863e831375badd2eb55');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
@@ -23,16 +23,16 @@ if ($response->isSucceeded()) {
     echo $profile['statusMessage'];
 }
 
-// $ch = curl_init($strUrl);
-// curl_setopt($ch, CURLOPT_GET, true);
-// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-// curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// curl_setopt($ch, CURLOPT_PROXY, $proxy);
-// curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-// $result = curl_exec($ch);
-// curl_close ($ch);
+$ch = curl_init($strUrl);
+curl_setopt($ch, CURLOPT_GET, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+$result = curl_exec($ch);
+curl_close ($ch);
 echo "Ok<br>";
 var_dump($response);
 var_dump($httpClient);
