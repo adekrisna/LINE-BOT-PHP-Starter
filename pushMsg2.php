@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
- <?php 
  
-$test = isset($_COOKIE['test'])? $_COOKIE['test']: 'no';
-echo $test;
-?> 
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -29,6 +25,11 @@ echo $test;
     </style>
 </head>
 <body>
+ <?php 
+ 
+$test = isset($_COOKIE['test'])? $_COOKIE['test']: 'no';
+echo $test;
+?> 
     <div class="container">
         <div class="row">
             <div class="col-xs-12 head-form">
