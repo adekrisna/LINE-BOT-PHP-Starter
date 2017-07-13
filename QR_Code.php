@@ -35,9 +35,9 @@
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
             
-            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+") or die("Unable to open file!");
-            fwrite($files, $get_mid);
-            fclose($files);
+//             $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+") or die("Unable to open file!");
+//             fwrite($files, $get_mid);
+//             fclose($files);
         }
         
         $ch = curl_init();
@@ -52,7 +52,7 @@
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);echo "Ok<br>";var_dump($_SESSION['mid']);
         curl_close ($ch);
-        //echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
+        echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
         
     }
     qr_code();
