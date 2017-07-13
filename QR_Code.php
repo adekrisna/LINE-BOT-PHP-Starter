@@ -26,8 +26,8 @@
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-
         $get_mid =  $arrJson['events'][0]['source']['userId'];
+        
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -35,7 +35,7 @@
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
             
-            $files = fopen("LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+") or die("Unable to open file!");
+            $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+") or die("Unable to open file!");
             fwrite($files, $get_mid);
             fclose($files);
         }
