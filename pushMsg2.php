@@ -96,7 +96,11 @@ $strAccessToken = 'f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8
 
 $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
-    
+ <?php 
+ 
+$test = isset($_COOKIE['test'])? $_COOKIE['test']: 'no';
+echo $test;
+?>   
 foreach($midUser as $key => $mid){        
         $messages = [
             "type" => "text",
