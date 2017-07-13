@@ -21,10 +21,9 @@ if ($response->isSucceeded()) {
     echo $profile['statusMessage'];
 }
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $strUrl);
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_POST, true);
+$ch = curl_init( $strUrl);
+curl_setopt($ch, CURLOPT_GET, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
