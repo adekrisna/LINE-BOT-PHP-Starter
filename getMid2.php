@@ -23,17 +23,17 @@ if ($response->isSucceeded()) {
     echo $profile['statusMessage'];
 }
 
-$ch = curl_init($strUrl);
-curl_setopt($ch, CURLOPT_GET, true);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_PROXY, $proxy);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-$result = curl_exec($ch);
-curl_close ($ch);
+// $ch = curl_init($strUrl);
+// curl_setopt($ch, CURLOPT_GET, true);
+// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+// curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// curl_setopt($ch, CURLOPT_PROXY, $proxy);
+// curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+// $result = curl_exec($ch);
+// curl_close ($ch);
 echo "Ok<br>";
 var_dump($response);
 var_dump($httpClient);
-var_dump($result);
+var_dump($bot);
