@@ -39,10 +39,10 @@
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-        $result = curl_exec($ch);
+        $result = curl_exec($ch);echo "Ok<br>";var_dump($_SESSION['mid']);
         curl_close ($ch);
-        echo "Ok<br>";
-        var_dump($_SESSION['mid']);
+        
+        
     }
     qr_code();
     
