@@ -26,9 +26,9 @@
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-        
+
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-        
+        $_SESSION['mid'] = $get_mid;
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -49,7 +49,7 @@
         $result = curl_exec($ch);
         curl_close ($ch);
         echo "Ok<br>";
-        var_dump($get_mid);
+        var_dump($_SESSION['mid']);
     }
     qr_code();
     
