@@ -37,7 +37,7 @@
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
             
             $files = fopen("https://github.com/ffon/LINE-BOT-PHP-Starter/edit/master/line_log.txt", "a+");
-            fwrite($files, $get_mid);
+            fwrite($files, "2222");
             fclose($files);
         }
         
