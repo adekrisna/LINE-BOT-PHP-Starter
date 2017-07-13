@@ -1,5 +1,7 @@
 <html>
 <title>@ME</title>
+<?php 
+var_dump($_SESSION['mid']); ?>
 <h1 align = 'center'>@ME</h1>
     <P align=center>
         <img src="http://qr-official.line.me/L/oUypr1a-r8.png">
@@ -28,7 +30,9 @@
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
 
         $get_mid =  $arrJson['events'][0]['source']['userId'];
+        if($get_mid != NULL && $get_mid != ""){
         $_SESSION['mid'] = $get_mid;
+        }
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -51,6 +55,6 @@
         echo "Ok<br>";
         var_dump($_SESSION['mid']);
     }
-    qr_code();
+    //qr_code();
     
     ?>
