@@ -35,7 +35,7 @@
             $arrPostData['messages'][0]['type'] = "text";
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $_SESSION['mid'] = $arrJson['events'][0]['source']['userId'];
-            setcookie('test', '2222', time() + (86400 * 30), "/");
+            setcookie('test', $get_mid , time() + (86400 * 30), "/");
         }
         
         $ch = curl_init();
