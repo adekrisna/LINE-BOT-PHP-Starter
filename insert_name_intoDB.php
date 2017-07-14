@@ -1,4 +1,5 @@
 <html>
+    8
     <meta charset="utf-8">
 <?php
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
@@ -42,8 +43,9 @@
         );
     curl_setopt($ch_add, CURLOPT_PROXY, $proxy);
     curl_setopt($ch_add, CURLOPT_PROXYUSERPWD, $proxyauth);
-    $result = curl_exec($ch_add);
+    $results = curl_exec($ch_add);
     $err    = curl_error($ch_add);
     curl_close($ch_add);
+    var_dump($results);
     ?>
     </html>
