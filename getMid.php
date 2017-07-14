@@ -13,16 +13,6 @@ $header = array(
 );
 
 
-// $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($strAccessToken);
-// $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '2016f3f7fb001c7f38154a3fe3f3202c']);
-// $response = $bot->getProfile('U7de80d0a2ceea863e831375badd2eb55');
-// if ($response->isSucceeded()) {
-//     $profile = $response->getJSONDecodedBody();
-//     echo $profile['displayName'];
-//     echo $profile['pictureUrl'];
-//     echo $profile['statusMessage'];
-// }
-
 $ch = curl_init($strUrl);
 curl_setopt($ch, CURLOPT_GET, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -37,4 +27,3 @@ echo "Ok<br>";
 var_dump($response);
 var_dump($httpClient);
 var_dump($result);
-//HTTP 500 error
