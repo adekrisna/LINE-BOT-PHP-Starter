@@ -20,4 +20,6 @@ curl_setopt($chAdd, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec($chAdd);
 $err    = curl_error($chAdd);
 curl_close($chAdd);
-var_dump($result);
+var_dump($result)."<br>";
+$result_decode = json_decode($result);
+var_dump($result_decode);
