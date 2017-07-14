@@ -1,4 +1,5 @@
 <html>
+    <meta charset="utf-8">
 <?php
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
