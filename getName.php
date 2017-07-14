@@ -14,10 +14,7 @@ $chAdd = curl_init();
 curl_setopt($chAdd, CURLOPT_URL, $strUrl);
 curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-"Content-Type: application/json",
-                                    )
-);
+curl_setopt($chAdd, CURLOPT_HTTPHEADER,$header);
 $result = curl_exec($chAdd);
 $err    = curl_error($chAdd);
 curl_close($chAdd);
