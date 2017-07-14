@@ -65,11 +65,13 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
         if ($mid!=null) {
-            $userObj = get_name($get_mid);
-            $userObj_decode = json_decode($userObj);
+            $name = '';
+            $image = '';
+//             $userObj = get_name($get_mid);
+//             $userObj_decode = json_decode($userObj);
 
-            $name = $userObj_decode->displayName;
-            $image = $userObj_decode->pictureUrl;
+//             $name = $userObj_decode->displayName;
+//             $image = $userObj_decode->pictureUrl;
             $chAdd = curl_init();
             curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
