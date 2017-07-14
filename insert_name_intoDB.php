@@ -33,7 +33,7 @@
     echo "<br>".$result_decode->statusMessage; 
     
     $ch_add = curl_init();
-    curl_setopt($ch_add, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$name.'&addby=ffon');
+    curl_setopt($ch_add, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$name.'&addby=ffon2');
     curl_setopt($ch_add, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($ch_add, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch_add, CURLOPT_HTTPHEADER, array(
