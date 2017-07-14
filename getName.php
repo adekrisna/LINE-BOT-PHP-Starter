@@ -15,6 +15,8 @@ curl_setopt($chAdd, CURLOPT_URL, $strUrl);
 curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($chAdd, CURLOPT_HTTPHEADER,$header);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec($chAdd);
 $err    = curl_error($chAdd);
 curl_close($chAdd);
