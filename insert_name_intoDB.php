@@ -1,6 +1,6 @@
 <html>
     <meta charset="utf-8">
-   9999
+    99
 <title>@ME</title>
 
 <h1 align = 'center'>@ME</h1>
@@ -17,7 +17,7 @@ function get_name($mid=NULL){
     $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
-    $strUrl = "https://api.line.me/v2/bot/profile/U7de80d0a2ceea863e831375badd2eb55";
+    $strUrl = "https://api.line.me/v2/bot/profile/$mid";
     $header = array(
     'Content-Type: application/json',
     'Authorization: Bearer ' . $strAccessToken
@@ -72,7 +72,7 @@ function reply_get_mid()
             $arrPostData['messages'][0]['type'] = "text";
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $chAdd = curl_init();
-            curl_setopt($chAdd,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name'.$name.'&image'.$image.'&addby=ffon3');
+            curl_setopt($chAdd,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
             curl_setopt($chAdd,CURLOPT_CUSTOMREQUEST , 'GET');
             curl_setopt($chAdd,CURLOPT_RETURNTRANSFER , true);
             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
