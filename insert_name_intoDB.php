@@ -18,6 +18,8 @@
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER,$header);
+    curl_setopt($ch, CURLOPT_PROXY, $proxy);
+    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
     $err    = curl_error($ch);
     curl_close($ch);
@@ -38,6 +40,8 @@
         "Content-Type: application/json",
                                                 )
         );
+    curl_setopt($ch_add, CURLOPT_PROXY, $proxy);
+    curl_setopt($ch_add, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch_add);
     $err    = curl_error($ch_add);
     curl_close($ch_add);
