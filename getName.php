@@ -23,3 +23,7 @@ curl_close($chAdd);
 var_dump($result)."<br>";
 $result_decode = json_decode($result);
 var_dump($result_decode);
+echo "<br>".$result_decode->displayName;
+echo "<br>".$result_decode->userId;
+echo "<br>".$result_decode->pictureUrl;
+echo "<br>".$result_decode->statusMessage; 
