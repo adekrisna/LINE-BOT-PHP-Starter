@@ -59,11 +59,11 @@ function reply_get_mid()
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
 
-        $userObj = get_name($get_mid);
-        $userObj_decode = json_decode($userObj);
+//         $userObj = get_name($get_mid);
+//         $userObj_decode = json_decode($userObj);
 
-        $name = $userObj_decode->displayName;
-        $image = $userObj_decode->pictureUrl;
+//         $name = $userObj_decode->displayName;
+//         $image = $userObj_decode->pictureUrl;
    
         
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
