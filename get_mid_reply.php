@@ -29,18 +29,17 @@
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
         
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
-        curl_setopt($ch,CURLOPT_CUSTOMREQUEST , 'GET');
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER , true);
-        //curl_setopt($ch,CURLOPT_POSTFIELDS, 'http://uat.dxplace.com/dxtms/testem?mid=U8c4eb5ebbd3493b74c6d17a77d3e6cd3');
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        $chAdd = curl_init();
+        curl_setopt($chAdd,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
+        curl_setopt($chAdd,CURLOPT_CUSTOMREQUEST , 'GET');
+        curl_setopt($chAdd,CURLOPT_RETURNTRANSFER , true);
+        curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
         "Content-Type: application/json",
                                                 )
         );
-        $result = curl_exec($ch);
-        $err    = curl_error($ch);
-        curl_close($ch);
+        $result = curl_exec($chAdd);
+        $err    = curl_error($chAdd);
+        curl_close($chAdd);
         
         if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
             $arrPostData = array();
