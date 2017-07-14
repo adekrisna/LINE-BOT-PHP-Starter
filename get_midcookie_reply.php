@@ -29,16 +29,16 @@ function qr_code()
     $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
     $get_mid =  $arrJson['events'][0]['source']['userId'];
 
-    $ch_add = curl_init();
-    curl_setopt($ch_add, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
-    curl_setopt($ch_add, CURLOPT_CUSTOMREQUEST, 'GET');
-    curl_setopt($ch_add, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch_add, CURLOPT_HTTPHEADER, array(
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     "Content-Type: application/json",
     ));
-    $result = curl_exec($ch_add);
-    $err    = curl_error($ch_add);
-    curl_close($ch_add);
+    $result = curl_exec($ch);
+    $err    = curl_error($ch);
+    curl_close($ch);
         
         
     $ch = curl_init();
