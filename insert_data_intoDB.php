@@ -57,27 +57,27 @@ function reply_get_mid()
         $get_mid =  $arrJson['events'][0]['source']['userId'];
 
 
-        if ($get_mid!=null) {
-            $userObj = get_name($get_mid);
-            $userObj_decode = json_decode($userObj);
+//         if ($get_mid!=null) {
+//             $userObj = get_name($get_mid);
+//             $userObj_decode = json_decode($userObj);
 
-            $name = $userObj_decode->displayName;
-            $image = $userObj_decode->pictureUrl;
+//             $name = $userObj_decode->displayName;
+//             $image = $userObj_decode->pictureUrl;
 
-            echo "there if check";
+//             echo "there if check";
 
-            $chAdd = curl_init();
-            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
-            curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-            curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-            "Content-Type: application/json",
-                                        )
-            );
-            $result = curl_exec($chAdd);
-            $err    = curl_error($chAdd);
-            curl_close($chAdd);
-        }
+//             $chAdd = curl_init();
+//             curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+//             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+//             curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+//             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+//             "Content-Type: application/json",
+//                                         )
+//             );
+//             $result = curl_exec($chAdd);
+//             $err    = curl_error($chAdd);
+//             curl_close($chAdd);
+//         }
     
         
         
