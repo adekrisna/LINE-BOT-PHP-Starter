@@ -64,6 +64,8 @@ function reply_get_mid()
             $name = $userObj_decode->displayName;
             $image = $userObj_decode->pictureUrl;
 
+            echo "there if check";
+
             $chAdd = curl_init();
             curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -91,8 +93,9 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
         curl_close ($ch);
+        echo "qr"
 }
-    qr_code();
+    reply_get_mid();
 
     
   ?>  
