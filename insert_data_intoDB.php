@@ -79,7 +79,7 @@ function reply_get_mid()
             // $result = curl_exec($ch);
             // $err    = curl_error($ch);
             // curl_close($ch);
-        }
+        //}
     }
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $strUrl);
