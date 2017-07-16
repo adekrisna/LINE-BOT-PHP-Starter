@@ -32,6 +32,7 @@ function get_name($mid = null)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+    echo "getName:".var_dump($result);
 
     return $result;
 }
@@ -55,7 +56,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-        echo "get_mid : ".var_dump($get_mid);
+       // echo "get_mid : ".var_dump($get_mid);
 
    // if ($get_mid!=null) {
     if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
@@ -93,6 +94,7 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
         curl_close ($ch);
+        var_dump($result);
         echo "<br>"."there ft get mid";
 }
     reply_get_mid();
