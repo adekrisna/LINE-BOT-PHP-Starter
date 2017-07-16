@@ -55,31 +55,25 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-
-
-//         if ($get_mid!=null) {
-//             $userObj = get_name($get_mid);
-//             $userObj_decode = json_decode($userObj);
-
-//             $name = $userObj_decode->displayName;
-//             $image = $userObj_decode->pictureUrl;
-
-//             echo "there if check";
-
-//             $chAdd = curl_init();
-//             curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
-//             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-//             curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-//             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-//             "Content-Type: application/json",
-//                                         )
-//             );
-//             $result = curl_exec($chAdd);
-//             $err    = curl_error($chAdd);
-//             curl_close($chAdd);
-//         }
-    
         
+        if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+            $arrPostData = array();
+            $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+            $arrPostData['messages'][0]['type'] = "text";
+            $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+           
+            $ch = curl_init();
+            curl_setopt($ch,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
+            curl_setopt($ch,CURLOPT_CUSTOMREQUEST , 'GET');
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER , true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json",
+                                                        )
+             );
+    $result = curl_exec($ch);
+    $err    = curl_error($ch);
+    curl_close($ch);
+        }
         
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $strUrl);
@@ -91,13 +85,11 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-        $result = curl_exec($ch);
-        $err_result = curl_error($ch);
+        $result = curl_exec($ch);echo "Ok<br>";var_dump($_SESSION['mid']);
         curl_close ($ch);
-        echo "qr";
-}
+      
+    }
     reply_get_mid();
-
     
-  ?>  
+    ?>  
 </html>
