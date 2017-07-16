@@ -92,8 +92,9 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
+        $err_result = curl_error($ch);
         curl_close ($ch);
-        echo "qr"
+        echo "qr";
 }
     reply_get_mid();
 
