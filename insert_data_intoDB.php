@@ -65,6 +65,7 @@ function reply_get_mid()
             $result_get_name = get_name($get_name);
             $user_obj = json_decode($result_get_name);
             var_dump($user_obj);
+            echo "there if check mid !=NULL";
            
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
@@ -90,9 +91,8 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
-    echo "Ok<br>";
-    var_dump($_SESSION['mid']);
         curl_close ($ch);
+        echo "there ft get mid";
 }
     reply_get_mid();
     
