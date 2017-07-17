@@ -1,6 +1,6 @@
 <html>
     <meta charset="utf-8">
-    9
+    7
 <title>@ME</title>
 
 <h1 align = 'center'>@ME</h1>
@@ -56,14 +56,14 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-       echo "get_mid : ".var_dump($get_mid);
+        echo "get_mid : ".var_dump($get_mid);
 
     if ($get_mid!=null) {
-        //if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-            // $arrPostData = array();
-            // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-            // $arrPostData['messages'][0]['type'] = "text";
-            // $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+        if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+            $arrPostData = array();
+            $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+            $arrPostData['messages'][0]['type'] = "text";
+            $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
             $result_get_name = get_name($get_mid);
             $user_obj = json_decode($result_get_name);
             var_dump($user_obj);
@@ -81,7 +81,7 @@ function reply_get_mid()
                 $result = curl_exec($chs);
                 $err    = curl_error($chs);
                 curl_close($chs);
-       // }
+        }
     }
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $strUrl);
@@ -95,7 +95,7 @@ function reply_get_mid()
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
         curl_close ($ch);
-        var_dump($result);
+        //var_dump($result);
         echo "<br>"."ft reply_get_mid()";
 }
     reply_get_mid();
