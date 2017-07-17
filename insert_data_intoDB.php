@@ -1,6 +1,6 @@
 <html>
     <meta charset="utf-8">
-    99
+    9
 <title>@ME</title>
 
 <h1 align = 'center'>@ME</h1>
@@ -56,32 +56,33 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-       // echo "get_mid : ".var_dump($get_mid);
+       echo "get_mid : ".var_dump($get_mid);
 
-   // if ($get_mid!=null) {
-    if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-        $arrPostData = array();
-        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-        $arrPostData['messages'][0]['type'] = "text";
-        $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
-        $result_get_name = get_name($get_name);
-        $user_obj = json_decode($result_get_name);
-        var_dump($user_obj);
-        echo "there if check";
+    if ($get_mid!=null) {
+        //if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+            // $arrPostData = array();
+            // $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+            // $arrPostData['messages'][0]['type'] = "text";
+            // $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+            $result_get_name = get_name($get_mid);
+            $user_obj = json_decode($result_get_name);
+            var_dump($user_obj);
+            echo "if check $get_mid!=null";
             
-        // $ch = curl_init();
-        // curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
-        // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        // "Content-Type: application/json",
-        //                                     )
-        // );
-        // $result = curl_exec($ch);
-        // $err    = curl_error($ch);
-        // curl_close($ch);
+            $chs = curl_init();
+            //curl_setopt($ch, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
+            curl_setopt($chs, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+            curl_setopt($chs, CURLOPT_CUSTOMREQUEST, 'GET');
+            curl_setopt($chs, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($chs, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json",
+                                            )
+                );
+                $result = curl_exec($chs);
+                $err    = curl_error($chs);
+                curl_close($chs);
+       // }
     }
-  //  }
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $strUrl);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -95,7 +96,7 @@ function reply_get_mid()
         $result = curl_exec($ch);
         curl_close ($ch);
         var_dump($result);
-        echo "<br>"."there ft get mid";
+        echo "<br>"."ft reply_get_mid()";
 }
     reply_get_mid();
     
