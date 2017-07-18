@@ -1,6 +1,6 @@
 <?php
 
-function get_Name()
+function get_name()
 {
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
@@ -43,5 +43,7 @@ function insert_to_tb($data)
     echo "<br>".$result_decode->userId;
     echo "<br>".$result_decode->pictureUrl;
     echo "<br>".$result_decode->statusMessage;
-    return $result;
+    var_dump($result);
 }
+get_name();
+?>
