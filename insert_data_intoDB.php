@@ -23,7 +23,6 @@ function get_name($mid = null)
     'Content-Type: application/json',
     'Authorization: Bearer ' . $strAccessToken
     );
-
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, $strUrl);
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -32,12 +31,9 @@ function get_name($mid = null)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-
     return $result;
-    var_dump($result)
+    var_dump($result);
 }
-
-
 function reply_get_mid()
 {
         
@@ -58,7 +54,6 @@ function reply_get_mid()
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
         $mid = get_name($get_mid);
-
     
     // if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
     //     $arrPostData = array();
@@ -68,10 +63,8 @@ function reply_get_mid()
     //     if ($get_mid!=null) {
     //         $userObj = get_name($get_mid);
     //         $userObj_decode = json_decode($userObj);
-
     //         $name = $userObj_decode->displayName;
     //         $image = $userObj_decode->pictureUrl;
-
     //         $chAdd = curl_init();
     //         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
     //         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
@@ -99,11 +92,14 @@ function reply_get_mid()
     curl_setopt($ch, CURLOPT_PROXY, $proxy);
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
+    $err    = curl_error($chAdd);
     curl_close ($ch);
+
+    var_dump($result);
+    var_dump($mid);
+    var_dump($err);
 }
     reply_get_mid();
-
-
     ?>
     
     </html>
