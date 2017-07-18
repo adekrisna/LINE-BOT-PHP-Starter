@@ -23,23 +23,29 @@ function get_Name($mid)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-    echo "result get name";
-    var_dump($result)."<br>";
+    insert_data_tb($result);
 }
 
 function insert_data_tb($mid)
 {
+    $de_mid = json_decode($mid);
+    $name = $de_mid->displayName;
+    //$mid= $de_mid->userId;
+    $image=$de_mid->pictureUrl;
+    $sta=$de_mid->statusMessage;
+
+
     $chAdd = curl_init();
-          curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=ffon_tes8'.'&image=image'.'&add_by=1');
-          curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-          curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-          curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-          "Content-Type: application/json",
-                                        )
-          );
-          $result = curl_exec($chAdd);
-          $err    = curl_error($chAdd);
-          curl_close($chAdd);
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=1'.$name.'&image='.$image.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+                            )
+    );
+    $result = curl_exec($chAdd);
+    $err    = curl_error($chAdd);
+    curl_close($chAdd);
 }
 
 function get_mid()
@@ -68,10 +74,8 @@ function get_mid()
           $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
           $arrPostData['messages'][0]['type'] = "text";
           $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-         $get_mid =  $arrJson['events'][0]['source']['userId'];
-
-         insert_data_tb($get_mid);
-         get_name($get_mid);
+          $get_mid =  $arrJson['events'][0]['source']['userId'];
+          get_name($get_mid);
     }
  
  
