@@ -72,7 +72,7 @@ function reply_get_mid()
             $chAdd = curl_init();
             curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-            curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+           // curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
             "Content-Type: application/json",
                                         )
@@ -92,7 +92,7 @@ function reply_get_mid()
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+   // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_PROXY, $proxy);
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
