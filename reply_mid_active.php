@@ -92,7 +92,7 @@ function get_mid()
     var_dump($get_mid);
 
 }
-get_name();
+//get_name();
 get_mid();
 
 ?>
