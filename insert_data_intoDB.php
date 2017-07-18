@@ -53,7 +53,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-        $mid = get_name($get_mid);
+       // $mid = get_name($get_mid);
     
     // if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
     //     $arrPostData = array();
@@ -95,9 +95,9 @@ function reply_get_mid()
     $err    = curl_error($chAdd);
     curl_close ($ch);
 
-    var_dump($result);
-    var_dump($mid);
-    var_dump($err);
+    echo "result: ".var_dump($result);
+    echo"mid : ".var_dump($get_mid);
+    echo"err : ".var_dump($err);
 }
     reply_get_mid();
     ?>
