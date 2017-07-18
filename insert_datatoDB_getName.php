@@ -42,9 +42,23 @@ function insert_to_tb($data)
     
     $name = $result_decode->displayName;
     var_dump($name);
-    echo "<br>";$result_decode->userId;
-    echo "<br>";$result_decode->pictureUrl;
-    echo "<br>";$result_decode->statusMessage;
-    
+    echo "<br>";
+    $mid=$result_decode->userId;
+    echo "<br>";
+    $image=$result_decode->pictureUrl;
+    echo "<br>";
+    $status=$result_decode->statusMessage;
+
+    $chAdd = curl_init();
+    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+    curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+    // curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json",
+                                )
+    );
+    $result = curl_exec($chAdd);
+    $err    = curl_error($chAdd);
+    curl_close($chAdd);
 }
 get_name();
