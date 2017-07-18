@@ -34,6 +34,5 @@ curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec($ch);
 curl_close ($ch);
 echo "Ok<br>";
-var_dump($response);
-var_dump($httpClient);
-var_dump($bot);
+var_dump($result);
+
