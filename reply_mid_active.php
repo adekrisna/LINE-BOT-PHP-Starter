@@ -1,4 +1,6 @@
 <?php
+get_mid();
+
 function get_Name($mid)
 {
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
@@ -118,9 +120,4 @@ function get_mid()
     var_dump($result);
     echo "mid";
     var_dump($get_mid);
-
 }
-
-get_mid();
-
-?>
