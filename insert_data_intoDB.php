@@ -31,8 +31,9 @@ function get_name($mid = null)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-    return $result;
+    echo "this is  result get name";
     var_dump($result);
+    return $result;
 }
 function reply_get_mid()
 {
@@ -60,6 +61,9 @@ function reply_get_mid()
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+        $get_mid =  $arrJson['events'][0]['source']['userId'];
+        $mid = get_name($get_mid);
+        
         if ($get_mid!=null) {
             $userObj = get_name($get_mid);
             $userObj_decode = json_decode($userObj);
@@ -76,6 +80,7 @@ function reply_get_mid()
             $result = curl_exec($chAdd);
             $err    = curl_error($chAdd);
             curl_close($chAdd);
+            echo "this is  result line member";
             var_dump($result);
         }
     }
