@@ -26,7 +26,7 @@ function get_name($mid = null)
     $chAdd = curl_init();
     curl_setopt($chAdd, CURLOPT_URL, $strUrl);
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-    curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+   // curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, $header);
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
@@ -56,7 +56,7 @@ function reply_get_mid()
         $get_mid =  $arrJson['events'][0]['source']['userId'];
        $mid = get_name($get_mid);
     
-    if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+    if ($arrJson['events'][0]['message']['text'] == "a") {
         $arrPostData = array();
         $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
         $arrPostData['messages'][0]['type'] = "text";
