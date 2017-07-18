@@ -1,6 +1,6 @@
 <?php
 
-function get_name()
+function get_Name()
 {
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
@@ -18,6 +18,8 @@ function get_name()
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, $header);
+    curl_setopt($ch, CURLOPT_PROXY, $proxy);
+    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
@@ -40,10 +42,9 @@ function insert_to_tb($data)
     
     $name = $result_decode->displayName;
     var_dump($name);
-    echo "<br>".$result_decode->userId;
-    echo "<br>".$result_decode->pictureUrl;
-    echo "<br>".$result_decode->statusMessage;
-    var_dump($result);
+    echo "<br>";$result_decode->userId;
+    echo "<br>";$result_decode->pictureUrl;
+    echo "<br>";$result_decode->statusMessage;
+    
 }
 get_name();
-?>
