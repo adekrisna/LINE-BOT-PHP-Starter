@@ -13,6 +13,7 @@
 <?php
 function get_name($mid = null)
 {
+    var_dump($mid);
     $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
     $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
@@ -33,6 +34,7 @@ function get_name($mid = null)
     curl_close($chAdd);
     echo "this is  result get name";
     var_dump($result);
+    
     return $result;
 }
 function reply_get_mid()
@@ -54,7 +56,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-       $mid = get_name($get_mid);
+        $mid = get_name($get_mid);
     
     if ($arrJson['events'][0]['message']['text'] == "a") {
         $arrPostData = array();
