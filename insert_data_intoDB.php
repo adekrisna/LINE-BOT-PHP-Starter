@@ -99,7 +99,7 @@ function reply_get_mid()
         $result = curl_exec($ch);
         curl_close ($ch);
 }
-    qr_code();
+    reply_get_mid();
     ?>
     
     </html>
