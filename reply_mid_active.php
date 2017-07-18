@@ -1,7 +1,7 @@
 <?php
 function insert_data_tb($mid){
     $chAdd = curl_init();
-          curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=ffon_test'.'&image=image'.'&add_by=1');
+          curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=ffon_test5'.'&image=image'.'&add_by=1');
           curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
           curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
           curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
