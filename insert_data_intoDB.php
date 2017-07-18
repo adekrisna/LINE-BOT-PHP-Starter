@@ -92,7 +92,7 @@ function reply_get_mid()
     curl_setopt($ch, CURLOPT_PROXY, $proxy);
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
-    $err    = curl_error($chAdd);
+    $err    = curl_error($ch);
     curl_close ($ch);
 
     echo "result: ".var_dump($result);
