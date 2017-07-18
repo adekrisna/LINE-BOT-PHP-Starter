@@ -72,7 +72,7 @@ function get_mid()
         var_dump($get_mids);
             
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&add_by=1');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         //curl_setopt($chAdd,CURLOPT_RETURNTRANSFER , true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
