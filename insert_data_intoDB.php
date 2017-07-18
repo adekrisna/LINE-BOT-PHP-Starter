@@ -56,7 +56,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-        var_dump($arrJson['events'][0]['source']);
+        echo "aa".var_dump($arrJson['events'][0]['source']);
         $mid = get_name($get_mid);
     
     if ($arrJson['events'][0]['message']['text'] == "a") {
