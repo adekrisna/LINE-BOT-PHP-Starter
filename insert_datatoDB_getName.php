@@ -60,5 +60,7 @@ function insert_to_tb($data)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+    echo "result return ";
+    var_dump($result);
 }
 get_name();
