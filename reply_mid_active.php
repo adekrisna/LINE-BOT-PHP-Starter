@@ -21,6 +21,7 @@ function get_Name($mid)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
+    echo "result get name";
     var_dump($result)."<br>";
     
     insert_data_tb($result);
@@ -50,7 +51,7 @@ function insert_data_tb($data)
     $result = curl_exec($chAdd);
     $err    = curl_error($chAdd);
     curl_close($chAdd);
-    echo "result return : ";
+    echo "result insert tb ";
     var_dump($result);
 }
 
@@ -112,8 +113,9 @@ function get_mid()
     curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
     $result = curl_exec($ch);
     curl_close ($ch);
-
+    echo "result get mid";
     var_dump($result);
+    echo "mid";
     var_dump($get_mid);
 
 }
