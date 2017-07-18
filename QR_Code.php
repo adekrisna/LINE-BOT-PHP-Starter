@@ -59,8 +59,9 @@
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-        $result = curl_exec($ch);echo "Ok<br>";var_dump($_SESSION['mid']);
+        $result = curl_exec($ch);
         curl_close ($ch);
+        var_dump($result);
         //echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
         //setcookie('test', 'kkkkkkkkkk' , time() + (86400 * 30), "/");
     }
