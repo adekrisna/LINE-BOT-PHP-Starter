@@ -53,32 +53,32 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
-       // $mid = get_name($get_mid);
+       $mid = get_name($get_mid);
     
-    // if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
-    //     $arrPostData = array();
-    //     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    //     $arrPostData['messages'][0]['type'] = "text";
-    //     $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
-    //     if ($get_mid!=null) {
-    //         $userObj = get_name($get_mid);
-    //         $userObj_decode = json_decode($userObj);
-    //         $name = $userObj_decode->displayName;
-    //         $image = $userObj_decode->pictureUrl;
-    //         $chAdd = curl_init();
-    //         curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
-    //         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-    //         curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-    //         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-    //         "Content-Type: application/json",
-    //                                     )
-    //         );
-    //         $result = curl_exec($chAdd);
-    //         $err    = curl_error($chAdd);
-    //         curl_close($chAdd);
-    //         var_dump($result);
-    //     }
-    // }
+    if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+        $arrPostData = array();
+        $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+        $arrPostData['messages'][0]['type'] = "text";
+        $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
+        if ($get_mid!=null) {
+            $userObj = get_name($get_mid);
+            $userObj_decode = json_decode($userObj);
+            $name = $userObj_decode->displayName;
+            $image = $userObj_decode->pictureUrl;
+            $chAdd = curl_init();
+            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+            curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+            curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+            "Content-Type: application/json",
+                                        )
+            );
+            $result = curl_exec($chAdd);
+            $err    = curl_error($chAdd);
+            curl_close($chAdd);
+            var_dump($result);
+        }
+    }
         
         
     $ch = curl_init();
