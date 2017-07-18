@@ -29,7 +29,7 @@
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
         
-        if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+        if ($arrJson['events'][0]['message']['text'] == "a") {
             $arrPostData = array();
             $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
             $arrPostData['messages'][0]['type'] = "text";
