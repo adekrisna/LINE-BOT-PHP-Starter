@@ -71,7 +71,7 @@ function reply_get_mid()
             $name = $userObj_decode->displayName;
             $image = $userObj_decode->pictureUrl;
             $chAdd = curl_init();
-            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&addby=ffon3');
+            curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&add_by=ffon3');
             curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
             curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
