@@ -95,7 +95,8 @@ function get_mid()
           $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
           $arrPostData['messages'][0]['type'] = "text";
           $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-         $get_mid =  $arrJson['events'][0]['source']['userId'];
+         $get_mid =  'Ub5fea2ff169cba24b2179fd33e59e454';
+
 
          get_name($get_mid);
     }
