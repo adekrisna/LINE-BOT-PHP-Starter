@@ -21,7 +21,8 @@ function get_name($mid = null)
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";
     $header = array(
-    'Content-Type: application/json',
+    'Content-Type: appl
+    ication/json',
     'Authorization: Bearer ' . $strAccessToken
     );
     $chAdd = curl_init();
@@ -57,7 +58,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
         echo "aa";
-    var_dump($arrJson['events'][0]['source']);
+        var_dump($arrJson['events'][0]['source']);
         $mid = get_name($get_mid);
     
     if ($arrJson['events'][0]['message']['text'] == "a") {
