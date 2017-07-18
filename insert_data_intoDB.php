@@ -34,6 +34,7 @@ function get_name($mid = null)
     curl_close($chAdd);
 
     return $result;
+    var_dump($result)
 }
 
 
@@ -56,6 +57,7 @@ function reply_get_mid()
         $arrPostData['messages'][0]['type'] = "text";
         $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
         $get_mid =  $arrJson['events'][0]['source']['userId'];
+        $mid = get_name($get_mid);
 
     
     // if ($arrJson['events'][0]['message']['text'] == "สวัสดี") {
