@@ -1,7 +1,7 @@
 <?php
-$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$strAccessToken = "XDEio/U+1tLcglINRntoiWnm3xBRzApRnLm5FHhpqHGEtU21j01yqjlxr83equ5W6qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/aSZQavLqwyHsT1rDcxjzf9ekwtwN1VXkZsCGo9bRxI5AdB04t89/1O/w1cDnyilFU=";
+$proxy = 'if_u_want_to_fix_url';
+$proxyauth = 'if_u_want_to_fix_url';   
+$strAccessToken = "Token";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -26,7 +26,7 @@ if ($arrJson['events'][0]['message']['text'] == "a") {
     $get_mid =  $arrJson['events'][0]['source']['userId'];
  
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name=ffon_test9'.'&image=image'.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'url?mid='.$get_mid.'&line_name=ffon_test9'.'&image=image'.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
@@ -48,8 +48,8 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-    curl_setopt($ch, CURLOPT_PROXY, $proxy);
-    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 $result = curl_exec($ch);
 curl_close ($ch);
 

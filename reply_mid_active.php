@@ -3,9 +3,9 @@ get_mid();
 
 function get_Name($mid)
 {
-    $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $strAccessToken = "XDEio/U+1tLcglINRntoiWnm3xBRzApRnLm5FHhpqHGEtU21j01yqjlxr83equ5W6qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/aSZQavLqwyHsT1rDcxjzf9ekwtwN1VXkZsCGo9bRxI5AdB04t89/1O/w1cDnyilFU=";
+    $proxy = 'if_u_want_to_fix_url';
+    $proxyauth = 'if_u_want_to_fix_url';   
+    $strAccessToken = "Token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";
@@ -36,7 +36,7 @@ function insert_data_tb($mid)
 
 
     $chAdd = curl_init();
-    curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$mid.'&line_name=1'.$name.'&image='.$image.'&add_by=1');
+    curl_setopt($chAdd, CURLOPT_URL, 'url?mid='.$mid.'&line_name=1'.$name.'&image='.$image.'&add_by=1');
     curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
     curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
@@ -50,10 +50,10 @@ function insert_data_tb($mid)
 
 function get_mid()
 {
-    $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $strAccessToken = "XDEio/U+1tLcglINRntoiWnm3xBRzApRnLm5FHhpqHGEtU21j01yqjlxr83equ5W6qVYXGI80LOObJe1H9EaoK4ZfSiSHwpUrRgQxlREc/aSZQavLqwyHsT1rDcxjzf9ekwtwN1VXkZsCGo9bRxI5AdB04t89/1O/w1cDnyilFU=";
- 
+    $proxy = 'if_u_want_to_fix_url';
+    $proxyauth = 'if_u_want_to_fix_url';   
+    $strAccessToken = "Token";
+     
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
  
@@ -74,7 +74,7 @@ function get_mid()
           $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
           $arrPostData['messages'][0]['type'] = "text";
           $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-          $get_mid =  'Ub5fea2ff169cba24b2179fd33e59e454';
+          $get_mid =  'mid';
           get_name($get_mid);
     }
  

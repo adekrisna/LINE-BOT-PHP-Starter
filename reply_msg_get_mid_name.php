@@ -13,9 +13,9 @@
 function get_name($mid = null)
 {
     
-    $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
+    $proxy = 'if_u_want_to_fix_url';
+    $proxyauth = 'if_u_want_to_fix_url';   
+    $strAccessToken = "Token";
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/profile/$mid";
@@ -39,10 +39,10 @@ function get_name($mid = null)
 }
 function get_mid()
 {
-    $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-    $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
-        
+    $proxy = 'if_u_want_to_fix_url';
+    $proxyauth = 'if_u_want_to_fix_url';   
+    $strAccessToken = "Token";
+       
     $content = file_get_contents('php://input');
     $arrJson = json_decode($content, true);
     $strUrl = "https://api.line.me/v2/bot/message/reply";
@@ -72,7 +72,7 @@ function get_mid()
         var_dump($get_mids);
             
         $chAdd = curl_init();
-        curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/line_member?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&add_by=1');
+        curl_setopt($chAdd, CURLOPT_URL, 'url?mid='.$get_mid.'&line_name='.$name.'&image='.$image.'&add_by=1');
         curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
         //curl_setopt($chAdd,CURLOPT_RETURNTRANSFER , true);
         curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(

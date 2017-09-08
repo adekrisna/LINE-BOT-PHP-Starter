@@ -83,11 +83,12 @@
 </form>
 
 <?php
-$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
+$proxy = 'if_u_want_to_fix_url';
+$proxyauth = 'if_u_want_to_fix_url';   
+$strAccessToken = "Token";
+ 
+$mids = array(0=>'mid'); 
 $text = $_POST['textArea'];
-$strAccessToken = "QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=";
-$mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55'); 
 foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text",

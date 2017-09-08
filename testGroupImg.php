@@ -58,13 +58,14 @@
   </fieldset>
 </form>
 <?php 
-$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';  
+$proxy = 'if_u_want_to_fix_url';
+$proxyauth = 'if_u_want_to_fix_url';   
+$strAccessToken = "Token";
+ 
        
 if ($_POST) { 
 //Setting
-$lineapis = array(0=>"mtBNqNUTljJzkrsjtubrH5hPvt4Lq93WXYJUPVLTNBw",1=>"dm43sIVngCBt9oD1ZkQDtW5YWmuYpjCTeMcSLJUJDhS"); //tsetGrop,test2
-//$lineapi = "49L0CDQLq1swOl8cElkaxpSbO3WSKl2rS2evcIdlgex";
+$lineapis = array(0=>"tokenGrop",1=>"tokenGrop"); //tsetGrop,test2
 $mms =  trim($_POST['textArea']);
 $img = trim($_POST['inputimage']);
 foreach($lineapis as $key => $lineapi){ 

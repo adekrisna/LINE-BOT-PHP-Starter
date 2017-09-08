@@ -11,10 +11,10 @@
 
 <?php
     function qr_code(){
-        $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-        $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-        $strAccessToken = "f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=";
-        
+        $proxy = 'if_u_want_to_fix_url';
+        $proxyauth = 'if_u_want_to_fix_url';   
+        $strAccessToken = "Token";
+         
         $content = file_get_contents('php://input');
         $arrJson = json_decode($content, true);
         $strUrl = "https://api.line.me/v2/bot/message/reply";
@@ -35,18 +35,6 @@
             $arrPostData['messages'][0]['type'] = "text";
             $arrPostData['messages'][0]['text'] = "สวัสดี ".$arrJson['events'][0]['source']['userId'];
            
-//             $ch = curl_init();
-//             curl_setopt($ch,CURLOPT_URL, 'http://uat.dxplace.com/dxtms/testem?mid='.$get_mid.'&addby=ffon');
-//             curl_setopt($ch,CURLOPT_CUSTOMREQUEST , 'GET');
-//             curl_setopt($ch,CURLOPT_RETURNTRANSFER , true);
-//             //curl_setopt($ch,CURLOPT_POSTFIELDS, 'http://uat.dxplace.com/dxtms/testem?mid=U8c4eb5ebbd3493b74c6d17a77d3e6cd3');
-//             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-//             "Content-Type: application/json",
-//                                                         )
-//              );
-//     $result = curl_exec($ch);
-//     $err    = curl_error($ch);
-//     curl_close($ch);
         }
         
         $ch = curl_init();
@@ -62,8 +50,7 @@
         $result = curl_exec($ch);
         curl_close ($ch);
         var_dump($result);
-        //echo '<script>window.open("https://mighty-inlet-38627.herokuapp.com/pushMsg2.php?mid=Ub5fea2ff169cba24b2179fd33e59e454", "_blank")</script>'
-        //setcookie('test', 'kkkkkkkkkk' , time() + (86400 * 30), "/");
+
     }
     qr_code();
     
